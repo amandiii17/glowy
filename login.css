@@ -1,0 +1,409 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: 'Poppins', cursive;
+  background: linear-gradient(to right, #ffdce6, #fff);
+  color: #000000;
+  overflow-x: hidden;
+}
+
+  
+
+/* Login Section */
+.login-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffe6ef, #fff0f6);
+  padding: 40px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-container h1 {
+  color: #c2185b;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.login-container p {
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.input-group input:focus {
+  border-color: #c2185b;
+  box-shadow: 0 0 6px rgba(194, 24, 91, 0.3);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.options a {
+  text-decoration: none;
+  color: #c2185b;
+  transition: 0.3s;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.btn-glow {
+  background: #c2185b;
+  color: #e4acd3;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  box-shadow: 0 0 15px #f8a5c2;
+}
+
+.btn-glow:hover {
+  background: #d49696;
+  color: #c2185b;
+  box-shadow: 0 0 25px #f8a5c2;
+}
+
+.signup-text {
+  margin-top: 20px;
+  color: #000000;
+  
+}
+
+.signup-text a {
+  color: #c2185b;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/*footer*/
+.footer {
+  background-color: #ffe4ec;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 25px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background:#fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 85px;
+  font-weight: bold;
+  color: #41021b;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #41021b;
+  font-weight: 500;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #c2185b;
+}
+
+
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.6);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  color: #c2185b;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: #c2185b;
+  color: #fff;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+
+/*footer*/
+.footer {
+  background-color: #ffe4ec;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  background-color:#ffe6ef;
+  color: #c2185b; 
+  font-family: 'Poppins', cursive;
+  padding: 50px 20px 30px 20px;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* About Section */
+.footer-about {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Quick Links Section */
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #c2185b;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #b35d8a; /* glow accent on hover */
+}
+
+/* Social Media Section */
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-social h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links, .footer-social {
+    margin-top: 25px;
+  }
+}
+
+/* Button */
+.image-button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.image-btn {
+    border: none;
+    padding: 0;
+    background: none; /* transparent background */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* circular image */
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(179, 93, 138, 0.4);
+    transition: all 0.3s ease;
+}
+
+.image-btn:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #b35d8a, 0 0 30px #ff9ec0;
+}
+

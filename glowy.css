@@ -1,0 +1,762 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', cursive;
+  background: #fff;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background:#fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 85px;
+  font-weight: bold;
+  color: #41021b;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #41021b;
+  font-weight: 500;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #c2185b;
+}
+
+
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.6);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  color: #c2185b;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: #c2185b;
+  color: #fff;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ffdce6, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #c2185b;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.btn-glow {
+  background: #c2185b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px #c2185b;
+  transition: 0.3s;
+}
+
+.btn-glow:hover {
+  background: #fff;
+  color: #c2185b;
+  box-shadow: 0 0 25px #f8a5c2;
+}
+
+/* Featured Section */
+.featured {
+  text-align: center;
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.featured h2 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.product-card {
+  width: 220px;
+  background: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(194, 24, 91, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  color: #c2185b;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 0.9rem;
+  padding-bottom: 15px;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: #ffe6ef;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  max-width: 500px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-outline {
+  border: 2px solid #c2185b;
+  color: #40001a;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #40001a;
+  color: #ffffff;
+}
+
+.about-image img {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+
+.site-footer {
+  background-color:#ffe6ef;
+  color: #c2185b; 
+  font-family: 'Poppins', cursive;
+  padding: 50px 20px 30px 20px;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* About Section */
+.footer-about {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Quick Links Section */
+.footer-links {
+  flex: 1 1 200px;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #c2185b;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #b35d8a; /* glow accent on hover */
+}
+
+/* Social Media Section */
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-social h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links, .footer-social {
+    margin-top: 25px;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.caption h2 {
+  font-size: 2rem;
+}
+
+.caption p {
+  font-size: 1rem;
+}
+
+
+/* Styles for the Latest Events Section */
+
+/* Container for the events section */
+.events-section {
+  padding: 60px 20px;              /* vertical padding */
+  background-color: #fdf9fb;       /* very light pink / blush background */
+}
+
+.events-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section title-events */
+.section-title {
+  font-family: 'Poppins', cursive;
+  text-align: center;
+  font-size: 2rem;
+  color: #c2185b; /* a soft mauve / rose color */
+  margin-bottom: 40px;
+  
+}
+
+/* Wrapper for the event cards */
+.events-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive grid */
+  gap: 30px; /* space between cards */
+}
+
+/* Individual event card */
+.event-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image part of the card */
+.event-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content part of the card */
+.event-content {
+  padding: 20px;
+  flex: 1; /* take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title of the event */
+.event-title {
+  font-size: 1.4rem;
+  color: #c2185b; /* a deeper rose / purple tone */
+  margin-bottom: 10px;
+}
+
+/* Date of the event */
+.event-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Description */
+.event-description {
+  font-size: 1rem;
+  color: #333;
+  flex: 1; /* push link to bottom if description is too short */
+  margin-bottom: 20px;
+}
+
+/* Link / button to learn more */
+.event-link {
+  text-decoration: none;
+  align-self: flex-start; /* so it stays to the left */
+  padding: 8px 16px;
+  background-color: #c2185b;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.event-link:hover {
+  background-color: #b35d8a;
+}
+
+/* Full Reviews Section */
+.reviews-section {
+  background-color: #fff6fa; /* soft pink background */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', cursive;
+}
+
+/* Title Styling */
+.reviews-title {
+  font-size: 2rem;
+  color: #c2185b;  /* soft mauve */
+  margin-bottom: 40px;
+}
+
+/* Grid container for reviews */
+.reviews-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive */
+  gap: 25px;
+}
+
+/* Review Card Styling */
+.review-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for review cards */
+.review-card:hover {
+  transform: translateY(-6px); /* slight lift */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Review Text Style */
+.review-text {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-style: italic; /* makes review look authentic */
+}
+
+/* Review Author */
+.review-author {
+  color: #c2185b; 
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* MAIN SECTION WRAPPER - skincare tips*/
+.tips-section {
+  background-color: #fff6fa; /* Light soft pink for beauty feel */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', cursive;
+}
+
+/* SECTION TITLE */
+.tips-title {
+  font-size: 2rem;
+  color: #c2185b; 
+  margin-bottom: 40px;
+}
+
+/* GRID CONTAINER FOR TIPS */
+.tips-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* Flexible grid layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* SINGLE TIP CARD */
+.tip-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* Hover effect to make it look glowy */
+.tip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Tip Title */
+.tip-title {
+  color: #c2185b; /* Deep mauve */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+/* Tip text style */
+.tip-text {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+
+/* SECTION STYLING social-media*/
+.social-section {
+  padding: 60px 20px;
+  background-color: #fff6fa; /* light pink beauty theme */
+  text-align: center;
+  font-family: 'Poppins', cursive;
+}
+
+/* Section Title */
+.social-title {
+  font-size: 2rem;
+  color: #c2185b; /* mauve pink */
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.social-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* GRID LAYOUT */
+.social-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* Responsive grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* INDIVIDUAL POST CARD */
+.social-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* soft shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+/* Hover effect to lift card */
+.social-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Instagram-like image */
+.social-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY ON HOVER */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;        /* hidden by default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay when hover */
+.social-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay text */
+.overlay-text {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Follow Button */
+.follow-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #c2185b;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* Hover for button */
+.follow-btn:hover {
+  background-color: #9a4f74;
+}
+
+
+/* Button */
+.image-button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.image-btn {
+    border: none;
+    padding: 0;
+    background: none; /* transparent background */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* circular image */
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(179, 93, 138, 0.4);
+    transition: all 0.3s ease;
+}
+
+.image-btn:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #b35d8a, 0 0 30px #ff9ec0;
+}
+
+
+
+

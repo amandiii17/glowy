@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowy Cosmetics |Shopping Cart </title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+ <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">GLOWY</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="glowy.html" >Home</a></li>
+        <li><a href="makeup.html">Makeup</a></li>
+        <li><a href="skin.html">Skincare</a></li>
+        <li><a href="gifts.html">Gifts</a></li>
+        <li><a href="search.html"><span >🔍</span></a></li>
+        <li><a href="cart.html"class="active">🛍️</a></li>
+        <li><a href="login.html">👤</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+<section class="hero">
+<div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Your Shopping Cart ✨</h1>
+    <p>Grab your order here!.</p>
+  </div>
+
+</section>
+
+
+    <!-- CART SECTION -->
+
+        <!-- Cart Items Container -->
+        <div class="cart-container">
+
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="images/lipss.png" class="cart-img" alt="Lipgloss">
+
+                <div class="cart-details">
+                    <h3 class="cart-product-name">Radiant Lipsgloss</h3>
+                    <p class="cart-price">Rs 1450</p>
+
+                    <div class="cart-qty">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                </div>
+
+                <button class="remove-btn">Remove</button>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="images/EDITED-ARTICLE-Lipsticks.jpg" class="cart-img" alt="lipstick">
+
+                <div class="cart-details">
+                    <h3 class="cart-product-name">Dewy Lipstick </h3>
+                      <p class="cart-price">Rs 2850</p>
+
+                    <div class="cart-qty">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                </div>
+
+                <button class="remove-btn">Remove</button>
+            </div>
+
+        </div>
+
+        <!-- CART SUMMARY -->
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+
+            <p>Subtotal: <span>Rs.0.00</span></p>
+            <p>Shipping: <span>Rs.600</span></p>
+            <p class="total">Total: <span>Rs.0.00</span></p>
+
+            <a href="#" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+
+    </section>
+
+    <!-- Link JS -->
+    <script src="cart.js"></script>
+
+    <!--Button-->
+  <div class="image-button-container">
+    <button class="image-btn" onclick="goBack()">
+        <img src="images/back.png" alt="Back">
+    </button>
+
+    <button class="image-btn" onclick="goForward()">
+        <img src="images/forward .png" alt="Forward">
+    </button>
+</div>
+
+
+
+
+
+  
+   <!-- FOOTER SECTION -->
+<footer class="site-footer">
+
+  <!-- Container for Footer Content -->
+  <div class="footer-container">
+
+    <!-- About / Brand Info -->
+    <div class="footer-about">
+      <img src="images/logo.png" alt="logo">
+      <p class="footer-desc">
+        Bringing you radiant skin and glowing confidence. Discover our tips, products, and skincare secrets.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="makeup.html">Makeup Products</a></li>
+        <li><a href="skin.html">Skincare Products</a></li>
+        <li><a href="gifts.html">Gift Items</a></li>
+        <li><a href="contacts.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="#"><img src="images/tw.png" alt="Twitter"></a>
+        <a href="#"><img src="images/tiktok.jpeg"alt="tiktok" ></a>
+      </div>
+    </div>
+
+  </div> <!-- End Footer Container -->
+
+  <!-- Bottom Copyright -->
+  <div class="footer-bottom">
+    <p>© 2025 Glowy Beauty. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
+  
+ </body> 
+</html>
